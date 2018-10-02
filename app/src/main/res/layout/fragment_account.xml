@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rsu57.ite.fastorder.AccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Email"
+            android:layout_above="@id/tvUserFullName"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/DarkRed"
+            android:textSize="15pt"/>
+
+        <TextView
+            android:id="@+id/tvUserFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Firstname / Lastname"
+            android:textColor="@color/DimGray"
+            android:textSize="10pt" />
+
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_orange"
+            android:textColor="@color/White"
+            android:layout_below="@id/tvUserFullName"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textAllCaps="false"
+            android:text="Logout" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

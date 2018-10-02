@@ -1,0 +1,3 @@
+https://github.com/simbiose/Encryption
+http://www.codexpedia.com/android/android-nfc-read-and-write-example/
+https://github.com/afollestad/material-dialogs

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="3dp"
+        card_view:cardMaxElevation="3dp"
+        android:layout_marginBottom="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:background="@drawable/selector_row">
+
+        <ImageView
+            android:id="@+id/ivFoodItem"
+            android:layout_width="120dp"
+            android:src="@drawable/img_placeholder"
+            android:layout_marginRight="10dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:id="@+id/tvFoodItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivFoodItem"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/tvFoodItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFoodItemName"
+            android:layout_toEndOf="@+id/ivFoodItem"
+            android:maxLines="3"
+            android:text="Description"
+            android:textColor="@color/DarkGray"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivFoodItem"
+            android:layout_toEndOf="@+id/ivFoodItem"
+            android:layout_marginBottom="8dp"
+            android:numStars="5"
+            android:rating="4" />
+
+        <TextView
+            android:id="@+id/tvFoodItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ratingBar"
+            android:layout_alignParentEnd="true"
+            android:text="0.00 ฿"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Green"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rsu57.ite.fastorder.MyCartFragment">
+
+    <com.santalu.emptyview.EmptyView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:errorText="ไม่สามารถโหลดข้อมูลได้"
+        app:errorButtonText="ลองอีกครั้ง"
+        app:emptyText="ไม่มีรายการอาหาร"
+        app:emptyDrawable="@drawable/ic_shopping_cart_gray"
+        app:emptyTextColor="@color/DimGray"
+        app:loadingStyle="circular"
+        app:loadingText="กำลังโหลด"
+        app:loadingTint="@color/colorPrimary">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewCartItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutBottom"
+        android:padding="5dp"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:background="@color/LightGrey"
+        android:layout_above="@id/btnConfirmOrder"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:text="Total"
+            android:gravity="center|left"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center|right"
+            android:text="0.00 ฿"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnConfirmOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_orange"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            android:text="สั่งอาหาร"/>
+
+    </com.santalu.emptyview.EmptyView>
+
+</RelativeLayout>

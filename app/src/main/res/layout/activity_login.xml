@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context="com.rsu57.ite.fastorder.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/logo" />
+
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_white"
+        android:drawableStart="@drawable/ic_person_outline_black_24dp"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/DarkGray"
+        android:hint="@string/hint_username"
+        android:inputType="textEmailAddress"
+        android:maxLength="50"
+        android:textColor="@color/Gray" />
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_below="@id/etUsername"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittext_white"
+        android:hint="@string/hint_password"
+        android:maxLength="15"
+        android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/DarkGray"
+        android:textColor="@color/Gray"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_below="@id/etPassword"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_red"
+        android:text="เข้าสู่ระบบ"
+        android:textColor="@color/White" />
+
+
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/Gray"
+        android:text="@string/forgotPassword"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@id/tvForgotPassword"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_orange"
+        android:text="ลงทะเบียน"
+        android:textColor="@color/White" />
+
+
+
+</RelativeLayout>
+

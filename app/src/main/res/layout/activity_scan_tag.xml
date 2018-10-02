@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rsu57.ite.fastorder.MainActivity">
+
+    <com.santalu.emptyview.EmptyView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadingStyle="circular"
+        app:loadingText="กำลังตรวจสอบ"
+        app:loadingTint="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/ivTapNfc"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/tap_nfc"/>
+
+    <TextView
+        android:id="@+id/tvTapMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="กรุณาแตะ NFC Tag"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_below="@id/ivTapNfc"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/btnBypass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_green"
+        android:layout_above="@id/btnLogout"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:text="Skip" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_red"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textAllCaps="false"
+        android:text="Logout" />
+
+    </com.santalu.emptyview.EmptyView>
+
+</RelativeLayout>

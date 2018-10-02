@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rsu57.ite.fastorder.FoodItemsActivity">
+
+    <com.santalu.emptyview.EmptyView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:errorText="ไม่สามารถโหลดข้อมูลได้"
+        app:errorButtonText="ลองอีกครั้ง"
+        app:emptyText="ไม่มีข้อมูล"
+        app:loadingStyle="circular"
+        app:loadingText="กำลังโหลด"
+        app:loadingTint="@color/colorPrimary">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewFoodItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutBottom"
+            android:padding="5dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            android:orientation="horizontal"
+            android:background="@color/FireBrick"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_shopping_cart" />
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/FireBrick"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/White"
+                android:paddingLeft="10dp"
+                android:gravity="center|left"
+                android:text="Total : 0.00 ฿" />
+
+        </LinearLayout>
+
+    </com.santalu.emptyview.EmptyView>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="2dp"
+        card_view:cardMaxElevation="2dp"
+        android:layout_marginBottom="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/selector_row">
+
+
+            <TextView
+                android:id="@+id/tvFoodItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toStartOf="@+id/tvFoodItemPrice"
+                android:maxLines="1"
+                android:text="Name"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFoodItemName"
+                android:layout_toStartOf="@+id/tvFoodItemPrice"
+                android:maxLines="3"
+                android:text="จำนวน : "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/DarkGray" />
+
+
+            <TextView
+                android:id="@+id/tvFoodItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_alignBottom="@+id/ratingBar"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:text="0.00 ฿"
+                android:textColor="@color/Green"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
